@@ -31,9 +31,7 @@ abstract class HabitsActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         appComponent = (applicationContext as HabitsApplication).component
-
         val habit = getHabitFromIntent(appComponent.habitList)
                     ?: appComponent.modelFactory.buildHabit()
 

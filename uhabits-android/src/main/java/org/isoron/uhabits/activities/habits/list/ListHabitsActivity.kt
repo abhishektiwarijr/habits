@@ -16,18 +16,16 @@
  * You should have received a copy of the GNU General Public License along
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-
 package org.isoron.uhabits.activities.habits.list
 
-import android.os.*
-import org.isoron.uhabits.activities.*
-import org.isoron.uhabits.activities.habits.list.views.*
-import org.isoron.uhabits.core.preferences.*
-import org.isoron.uhabits.core.ui.ThemeSwitcher.*
-import org.isoron.uhabits.core.utils.*
+import android.os.Bundle
+import org.isoron.uhabits.activities.HabitsActivity
+import org.isoron.uhabits.activities.habits.list.views.HabitCardListAdapter
+import org.isoron.uhabits.core.preferences.Preferences
+import org.isoron.uhabits.core.ui.ThemeSwitcher.THEME_DARK
+import org.isoron.uhabits.core.utils.MidnightTimer
 
 class ListHabitsActivity : HabitsActivity() {
-
     var pureBlack: Boolean = false
     lateinit var adapter: HabitCardListAdapter
     lateinit var rootView: ListHabitsRootView
@@ -43,7 +41,6 @@ class ListHabitsActivity : HabitsActivity() {
         rootView = component.listHabitsRootView
         screen = component.listHabitsScreen
         adapter = component.habitCardListAdapter
-
         setScreen(screen)
         component.listHabitsBehavior.onStartup()
     }
@@ -64,7 +61,6 @@ class ListHabitsActivity : HabitsActivity() {
         if (prefs.theme == THEME_DARK && prefs.isPureBlackEnabled != pureBlack) {
             restartWithFade(ListHabitsActivity::class.java)
         }
-
         super.onResume()
     }
 }

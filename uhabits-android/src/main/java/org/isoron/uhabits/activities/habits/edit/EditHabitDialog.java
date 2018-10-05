@@ -97,10 +97,7 @@ public class EditHabitDialog extends AppCompatDialogFragment
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater,
-                             ViewGroup container,
-                             Bundle savedInstanceState)
-    {
+    public View onCreateView(@NonNull LayoutInflater inflater,ViewGroup container,Bundle savedInstanceState) {
         View view;
         view = inflater.inflate(R.layout.edit_habit, container, false);
 

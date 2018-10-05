@@ -85,8 +85,7 @@ abstract public class BaseActivity extends AppCompatActivity
         this.baseMenu = baseMenu;
     }
 
-    public void setScreen(@Nullable BaseScreen screen)
-    {
+    public void setScreen(@Nullable BaseScreen screen) {
         this.screen = screen;
     }
 

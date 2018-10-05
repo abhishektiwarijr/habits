@@ -19,16 +19,21 @@
 
 package org.isoron.uhabits.activities
 
-import dagger.*
-import org.isoron.androidbase.activities.*
-import org.isoron.uhabits.*
-import org.isoron.uhabits.activities.about.*
-import org.isoron.uhabits.activities.common.dialogs.*
+import dagger.Component
+import org.isoron.androidbase.activities.ActivityContextModule
+import org.isoron.androidbase.activities.ActivityScope
+import org.isoron.androidbase.activities.BaseActivityModule
+import org.isoron.uhabits.HabitsApplicationComponent
+import org.isoron.uhabits.activities.about.AboutModule
+import org.isoron.uhabits.activities.about.AboutRootView
+import org.isoron.uhabits.activities.about.AboutScreen
+import org.isoron.uhabits.activities.common.dialogs.ColorPickerDialogFactory
 import org.isoron.uhabits.activities.habits.list.*
-import org.isoron.uhabits.activities.habits.list.views.*
-import org.isoron.uhabits.activities.habits.show.*
-import org.isoron.uhabits.core.ui.*
-import org.isoron.uhabits.core.ui.screens.habits.list.*
+import org.isoron.uhabits.activities.habits.list.views.HabitCardListAdapter
+import org.isoron.uhabits.activities.habits.show.ShowHabitModule
+import org.isoron.uhabits.activities.habits.show.ShowHabitScreen
+import org.isoron.uhabits.core.ui.ThemeSwitcher
+import org.isoron.uhabits.core.ui.screens.habits.list.ListHabitsBehavior
 
 @ActivityScope
 @Component(modules = arrayOf(
